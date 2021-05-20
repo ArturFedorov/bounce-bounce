@@ -1,31 +1,6 @@
 <template>
   <h1>{{ msg }}</h1>
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur" target="_blank">
-      Vetur
-    </a>
-    or
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    (if using
-    <code>script setup</code>)
-  </p>
-
-  <p>See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank"> Vite Docs </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  <h1>that are not for everybody.</h1>
 </template>
 
 <script lang="ts">
@@ -46,9 +21,14 @@
   })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   a {
-    color: #42b983;
+    color: green;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 900;
   }
 
   label {

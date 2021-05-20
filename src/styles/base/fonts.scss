@@ -1,0 +1,27 @@
+@font-face {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/TTNorms-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/TTNorms-Medium.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/TTNorms-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/TTNorms-ExtraBold.ttf') format('ttf');
+}

@@ -1,27 +1,30 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2020: true
   },
   extends: [
     'plugin:vue/vue3-recommended',
-    'prettier',
+    'prettier/vue',
     '@vue/prettier',
-    '@vue/prettier/@typescript-eslint'
+    '@vue/prettier/@typescript-eslint',
+    '@vue/typescript'
   ],
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: 2020,
     sourceType: 'module'
   },
+  plugins: ['vue'],
   rules: {
     'prettier/prettier': ['error', { singleQuote: true, trailingComma: 'none' }]
   },
+  overrides: [
+    {
+      files: ['src/**/*.+(ts|vue)']
+    }
+  ],
   settings: {
     'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        moduleDirectory: ['node_modules', 'src/']
-      },
       typescript: {
         alwaysTryTypes: true
       }
