@@ -1,6 +1,8 @@
 // colors
 $black: #220C22;
+$gray: #E0E0E0;
 $green: #42b983;
+$purple: #6D3CC8;
 $purple-light: #F5F7FA;
 
 // Building Units
@@ -8,6 +10,7 @@ $building-unit: 10px;
 $building-unit-x0_5: $building-unit / 2; // 5px
 $building-unit-x1_5: $building-unit + $building-unit-x0_5; // 15px
 $building-unit-x2: $building-unit * 2; // 20px
+$building-unit-x2_5: $building-unit * 2.5; // 25px
 $building-unit-x3: $building-unit * 3; // 30px
 $building-unit-x4: $building-unit * 4; // 40px
 $building-unit-x5: $building-unit * 5; // 50px
@@ -18,6 +21,7 @@ $building-unit-x9: $building-unit * 9; // 90px
 $building-unit-x10: $building-unit * 10; // 100px
 $building-unit-x11: $building-unit * 11; // 110px
 $building-unit-x12: $building-unit * 12; // 120px
+$building-unit-x14: $building-unit * 14; // 120px
 $building-unit-x15: $building-unit * 15; // 150px
 
 $default-transition: all .4s;

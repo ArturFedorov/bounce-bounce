@@ -1,11 +1,11 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import LoadersView from '@/pages/plugins/PluginsPage.vue'
+const LoadersView = () => import('@/pages/plugins/PluginsPage.vue')
 
 export enum Routes {
   LOADERS = 'loaders'
 }
 
-const routes: RouteRecordRaw[] = [{ path: '/', name: Routes.LOADERS, component: LoadersView }]
+const routes: RouteRecordRaw[] = [{ path: '/:type?', name: Routes.LOADERS, component: LoadersView }]
 
 const router = createRouter({
   history: createWebHashHistory(),
