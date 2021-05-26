@@ -5,19 +5,21 @@
       class="plugins-navigation-link"
     >
       <SvgIcon color="#220C22" name="list" />
-      Components
+      <span class="is-white-text">Components</span>
     </router-link>
     <router-link
       :to="{ name: routes.LOADERS, params: { type: 'loaders' } }"
       class="plugins-navigation-link"
     >
-      Loaders
+      <SvgIcon color="#220C22" name="list" />
+      <span class="is-white-text">Loaders</span>
     </router-link>
     <router-link
       :to="{ name: routes.LOADERS, params: { type: 'other' } }"
       class="plugins-navigation-link"
     >
-      Other
+      <SvgIcon color="#220C22" name="list" />
+      <span class="is-white-text">Controls</span>
     </router-link>
   </div>
 </template>
@@ -44,21 +46,21 @@
     background-color: $black;
 
     &-link {
-      color: $white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       border-right: 1px dashed $gray;
       min-width: $building-unit-x14;
       padding: $building-unit-x1_5 $building-unit-x2_5;
-      text-align: center;
       transition: $default-transition;
-      position: relative;
+
+      .is-white-text {
+        margin-left: $building-unit;
+      }
     }
   }
 
   .router-link-exact-active {
     font-weight: $font-bold;
-
-    &:after {
-      opacity: 1;
-    }
   }
 </style>

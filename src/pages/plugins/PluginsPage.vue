@@ -3,7 +3,7 @@
     <PluginsHeader />
     <main>
       <div class="container">
-        <PluginsNavigation />
+        <PluginsNavigation class="plugins-navigation" />
       </div>
     </main>
   </div>
@@ -22,4 +22,8 @@
   })
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+  .plugins-navigation {
+    margin-top: $building-unit-x3;
+  }
+</style>
