@@ -1,7 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import eslint from '@rollup/plugin-eslint'
+import viteSvgIcons from 'vite-plugin-svg-icons';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,10 +13,11 @@ export default defineConfig({
     }
   },
   plugins: [
-    // eslint({
-    //   include: '**/*.+(vue|js|jsx|ts|tsx)'
-    // }),
-    vue()
+    vue(),
+    viteSvgIcons({
+      iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+      symbolId: 'icon-[dir]-[name]'
+    })
   ],
   resolve: {
     alias: {

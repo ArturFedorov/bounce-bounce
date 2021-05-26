@@ -4,6 +4,7 @@
       :to="{ name: routes.LOADERS, params: { type: 'components' } }"
       class="plugins-navigation-link"
     >
+      <SvgIcon color="#220C22" name="list" />
       Components
     </router-link>
     <router-link
@@ -38,34 +39,18 @@
 
 <style scoped lang="scss">
   .plugins-navigation {
+    border-radius: $building-unit-x2;
     display: flex;
+    background-color: $black;
 
     &-link {
+      color: $white;
       border-right: 1px dashed $gray;
       min-width: $building-unit-x14;
       padding: $building-unit-x1_5 $building-unit-x2_5;
       text-align: center;
       transition: $default-transition;
       position: relative;
-
-      &:after {
-        display: flex;
-        justify-content: center;
-        left: 50%;
-        top: -$building-unit;
-        content: '';
-        background-color: $purple;
-        border-radius: 50%;
-        opacity: 0;
-        position: absolute;
-        height: $building-unit;
-        transition: $default-transition;
-        width: $building-unit;
-      }
-
-      &:first-child {
-        border-left: 1px dashed $gray;
-      }
     }
   }
 
