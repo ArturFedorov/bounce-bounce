@@ -2,10 +2,11 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './styles/styles.scss'
 import router from './router/router'
-import components from './components/common'
+import registerGlobalComponents from './components/common'
 import 'virtual:svg-icons-register'
+import store from './store'
 
 const app = createApp(App)
-Object.keys(components).forEach((key) => app.component(key, components[key]))
+registerGlobalComponents(app)
 
-app.use(router).mount('#app')
+app.use(router).use(store).mount('#app')
