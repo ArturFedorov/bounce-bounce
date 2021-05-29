@@ -27,8 +27,8 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import { Routes } from '@/router/router'
-  import { PluginType } from '@/shared/types/enums/PluginType'
+  import { Routes } from '/@/router/router'
+  import { PluginType } from '/@/shared/types/enums/PluginType'
 
   export default defineComponent({
     setup() {

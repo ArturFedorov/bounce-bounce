@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: $font-regular;
   src: url('../fonts/TTNorms-Regular.ttf') format('ttf'),
-       url('@/styles/fonts/TTNorms-Regular.woff') format('woff2');
+       url('/@/styles/fonts/TTNorms-Regular.woff') format('woff2');
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: $font-medium;
   src: url('../fonts/TTNorms-Medium.ttf') format('ttf'),
-       url('@/styles/fonts/TTNorms-Medium.woff') format('woff');
+       url('/@/styles/fonts/TTNorms-Medium.woff') format('woff');
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: $font-bold;
   src: url('../fonts/TTNorms-Bold.ttf') format('ttf'),
-       url('@/styles/fonts/TTNorms-Bold.woff') format('woff');
+       url('/@/styles/fonts/TTNorms-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -27,5 +27,5 @@
   font-style: normal;
   font-weight: $font-extra-bold;
   src: url('../fonts/TTNorms-ExtraBold.ttf') format('ttf'),
-       url('@/styles/fonts/TTNorms-ExtraBold.woff') format('woff');
+       url('/@/styles/fonts/TTNorms-ExtraBold.woff') format('woff');
 }

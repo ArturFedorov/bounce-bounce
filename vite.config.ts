@@ -12,16 +12,18 @@ export default defineConfig({
       }
     }
   },
+  resolve: {
+    extensions: ['.ts', '.js', '.scss', '.vue'],
+    alias: {
+      '/@': path.resolve(__dirname, 'src')
+    }
+  },
+  assetsInclude: 'woff',
   plugins: [
     vue(),
     viteSvgIcons({
       iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
       symbolId: 'icon-[dir]-[name]'
     })
-  ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, '/src')
-    }
-  }
+  ]
 })
