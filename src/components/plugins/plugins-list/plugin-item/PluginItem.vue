@@ -16,6 +16,9 @@
 <style scoped lang="scss">
   .plugin {
     &-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background-color: $purple-light;
       border-radius: $building-unit-x4;
       height: 280px;

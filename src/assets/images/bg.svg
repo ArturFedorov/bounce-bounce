@@ -5,7 +5,7 @@
             dur="1s"
             repeatCount="1"
     />
-    <line opacity="0.2" x1="1260.5" y1="2.18557e-08" x2="1260.5" y2="440" stroke="#F8F0F1" >
+    <line opacity="0.2" x1="1260.5" y1="2.18557e-08" x2="1260.5" y2="440" stroke="#D4FD01" >
         <animate
                 attributeName="y2"
                 begin="0.2s"
@@ -15,7 +15,7 @@
                 repeatCount="1"
         />
     </line>
-    <line opacity="0.5" x1="1200.5" y1="2.18557e-08" x2="1200.5" y2="440" stroke="#F8F0F1">
+    <line opacity="0.5" x1="1200.5" y1="2.18557e-08" x2="1200.5" y2="440" stroke="#D4FD01">
         <animate
                 attributeName="y2"
                 begin="0.1s"
@@ -25,7 +25,7 @@
                 repeatCount="1"
         />
     </line>
-    <line opacity="0.5" x1="1140.5" y1="2.18557e-08" x2="1140.5" y2="440" stroke="#F8F0F1">
+    <line opacity="0.5" x1="1140.5" y1="2.18557e-08" x2="1140.5" y2="440" stroke="#D4FD01">
         <animate
                 attributeName="y2"
                 begin="0.25s"
@@ -35,7 +35,7 @@
                 repeatCount="1"
         />
     </line>
-    <line opacity="0.5" x1="1080.5" y1="2.18557e-08" x2="1080.5" y2="440" stroke="#F8F0F1">
+    <line opacity="0.5" x1="1080.5" y1="2.18557e-08" x2="1080.5" y2="440" stroke="#D4FD01">
         <animate
                 attributeName="y2"
                 begin="0.3s"
@@ -45,7 +45,7 @@
                 repeatCount="1"
         />
     </line>
-<line opacity="0.5" x1="1020.5" y1="2.18557e-08" x2="1020.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.5" x1="1020.5" y1="2.18557e-08" x2="1020.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.35s"
@@ -55,7 +55,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.5" x1="960.5" y1="2.18557e-08" x2="960.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.5" x1="960.5" y1="2.18557e-08" x2="960.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.4s"
@@ -65,7 +65,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.5" x1="900.5" y1="2.18557e-08" x2="900.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.5" x1="900.5" y1="2.18557e-08" x2="900.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.45s"
@@ -75,7 +75,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.5" x1="840.5" y1="2.18557e-08" x2="840.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.5" x1="840.5" y1="2.18557e-08" x2="840.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.5s"
@@ -85,7 +85,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.3" x1="780.5" y1="2.18557e-08" x2="780.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.3" x1="780.5" y1="2.18557e-08" x2="780.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.55s"
@@ -95,7 +95,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="720.5" y1="2.18557e-08" x2="720.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="720.5" y1="2.18557e-08" x2="720.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.6s"
@@ -105,7 +105,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="660.5" y1="2.18557e-08" x2="660.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="660.5" y1="2.18557e-08" x2="660.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.65s"
@@ -115,7 +115,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="600.5" y1="2.18557e-08" x2="600.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="600.5" y1="2.18557e-08" x2="600.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.7s"
@@ -125,7 +125,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="540.5" y1="2.18557e-08" x2="540.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="540.5" y1="2.18557e-08" x2="540.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.75s"
@@ -135,7 +135,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="480.5" y1="2.18557e-08" x2="480.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="480.5" y1="2.18557e-08" x2="480.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.8"
@@ -145,7 +145,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="420.5" y1="2.18557e-08" x2="420.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="420.5" y1="2.18557e-08" x2="420.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.85s"
@@ -155,7 +155,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="360.5" y1="2.18557e-08" x2="360.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="360.5" y1="2.18557e-08" x2="360.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.9s"
@@ -165,7 +165,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="300.5" y1="2.18557e-08" x2="300.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="300.5" y1="2.18557e-08" x2="300.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="1s"
@@ -175,7 +175,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="240.5" y1="2.18557e-08" x2="240.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="240.5" y1="2.18557e-08" x2="240.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.21s"
@@ -185,7 +185,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="180.5" y1="2.18557e-08" x2="180.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="180.5" y1="2.18557e-08" x2="180.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.18s"
@@ -195,7 +195,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.1" x1="120.5" y1="2.18557e-08" x2="120.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.1" x1="120.5" y1="2.18557e-08" x2="120.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.38s"
@@ -205,7 +205,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.3" x1="60.5" y1="2.18557e-08" x2="60.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.3" x1="60.5" y1="2.18557e-08" x2="60.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.65s"
@@ -215,7 +215,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.5" x1="0.5" y1="2.18557e-08" x2="0.499981" y2="440" stroke="#F8F0F1">
+<line opacity="0.5" x1="0.5" y1="2.18557e-08" x2="0.499981" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.75s"
@@ -225,7 +225,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.2" x1="1320.5" y1="2.18557e-08" x2="1320.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.2" x1="1320.5" y1="2.18557e-08" x2="1320.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.45s"
@@ -235,7 +235,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.2" x1="1380.5" y1="2.18557e-08" x2="1380.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.2" x1="1380.5" y1="2.18557e-08" x2="1380.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.5s"
@@ -245,7 +245,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.2" x1="1440.5" y1="2.18557e-08" x2="1440.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.2" x1="1440.5" y1="2.18557e-08" x2="1440.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.95s"
@@ -255,7 +255,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.2" x1="1500.5" y1="2.18557e-08" x2="1500.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.2" x1="1500.5" y1="2.18557e-08" x2="1500.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.95s"
@@ -265,7 +265,7 @@
             repeatCount="1"
     />
 </line>
-    <line opacity="0.2" x1="1560.5" y1="2.18557e-08" x2="1560.5" y2="440" stroke="#F8F0F1">
+    <line opacity="0.2" x1="1560.5" y1="2.18557e-08" x2="1560.5" y2="440" stroke="#D4FD01">
         <animate
             attributeName="y2"
             begin="0.25s"
@@ -274,7 +274,7 @@
             dur="1s"
             repeatCount="1"/>
     </line>
-<line opacity="0.2" x1="1620.5" y1="2.18557e-08" x2="1620.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.2" x1="1620.5" y1="2.18557e-08" x2="1620.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.4s"
@@ -284,7 +284,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.5" x1="1680.5" y1="2.18557e-08" x2="1680.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.5" x1="1680.5" y1="2.18557e-08" x2="1680.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.25s"
@@ -294,7 +294,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.5" x1="1740.5" y1="2.18557e-08" x2="1740.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.5" x1="1740.5" y1="2.18557e-08" x2="1740.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.15s"
@@ -304,7 +304,7 @@
             repeatCount="1"
     />
 </line>
-<line opacity="0.5" x1="1800.5" y1="2.18557e-08" x2="1800.5" y2="440" stroke="#F8F0F1">
+<line opacity="0.5" x1="1800.5" y1="2.18557e-08" x2="1800.5" y2="440" stroke="#D4FD01">
     <animate
             attributeName="y2"
             begin="0.05s"

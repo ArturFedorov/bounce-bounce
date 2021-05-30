@@ -1,16 +1,21 @@
 <template>
   <div class="plugin-list">
-    <PluginItem :key="item" v-for="item in [1, 2, 3, 4, 5, 6, 7, 8, 9]" />
+    <PluginItem :key="item" v-for="item in [1, 2, 3, 4, 5, 6, 7, 8, 9]">
+      <component :is="`PluginsPlaceholder`" />
+    </PluginItem>
   </div>
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import { Plugin } from '/@/shared/types/models/Plugin'
-  import PluginItem from './plugin-item/PluginItem.vue'
+  import PluginItem from '/@/components/plugins/plugins-list/plugin-item/PluginItem.vue'
+  import PluginsPlaceholder from '/@/components/plugins/plugins-src/plugins-placeholder/PluginsPlaceholder.vue'
 
   export default defineComponent({
-    components: { PluginItem },
+    components: {
+      PluginItem,
+      PluginsPlaceholder
+    },
     props: {
       pluginType: {
         type: String,
@@ -20,6 +25,10 @@
         type: Array,
         required: true
       }
+    },
+    setup(props, context) {
+      // const
+      console.log(context)
     }
   })
 </script>

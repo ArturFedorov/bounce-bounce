@@ -1,3 +1,6 @@
+import { Plugin } from '/@/shared/types/models/Plugin'
+import pluginsList from '/@/store/features/plugins/plugins'
+
 export interface PluginModule {
   plugins: Plugin[]
 }
@@ -7,7 +10,7 @@ export const GET_PLUGINS = 'plugins/GET_PLUGINS'
 const plugins = {
   state: (): PluginModule => {
     return {
-      plugins: []
+      plugins: pluginsList
     }
   },
   getters: {

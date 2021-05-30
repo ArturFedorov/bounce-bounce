@@ -2,7 +2,7 @@
   <div class="plugins-header">
     <div class="container plugins-header-container">
       <div class="plugins-header-section">
-        <h1 class="plugins-header-heading is-white-text">
+        <h1 class="plugins-header-heading is-green-text">
           UI Components <br />
           that are not for everybody.
         </h1>
