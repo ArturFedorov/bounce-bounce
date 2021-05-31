@@ -9,14 +9,10 @@
 <script lang="ts">
   import { defineComponent } from 'vue'
   import PluginItem from '/@/components/plugins/plugins-list/plugin-item/PluginItem.vue'
-  import PluginsPlaceholder from '/@/components/plugins/plugins-src/plugins-placeholder/PluginsPlaceholder.vue'
-  import BouncingBalls from '/@/components/plugins/plugins-src/loaders/BouncingBalls.vue'
 
   export default defineComponent({
     components: {
-      BouncingBalls,
-      PluginItem,
-      PluginsPlaceholder
+      PluginItem
     },
     props: {
       pluginType: {

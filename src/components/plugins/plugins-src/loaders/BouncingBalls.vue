@@ -3,13 +3,13 @@
 </template>
 
 <style lang="scss" scoped>
-  $size-dot: 1.5vmin;
+  $size-dot: 1.2vmin;
 
   .bouncing-balls {
     border-radius: $border-radius;
     position: relative;
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     display: flex;
     place-items: center;
 
