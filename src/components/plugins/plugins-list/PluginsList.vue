@@ -1,7 +1,7 @@
 <template>
   <div class="plugin-list">
     <PluginItem :key="item" v-for="item in [1, 2, 3, 4, 5, 6, 7, 8, 9]">
-      <component :is="`PluginsPlaceholder`" />
+      <component :is="item === 1 ? `BouncingBalls` : 'PluginsPlaceholder'" />
     </PluginItem>
   </div>
 </template>
@@ -10,9 +10,11 @@
   import { defineComponent } from 'vue'
   import PluginItem from '/@/components/plugins/plugins-list/plugin-item/PluginItem.vue'
   import PluginsPlaceholder from '/@/components/plugins/plugins-src/plugins-placeholder/PluginsPlaceholder.vue'
+  import BouncingBalls from '/@/components/plugins/plugins-src/loaders/BouncingBalls.vue'
 
   export default defineComponent({
     components: {
+      BouncingBalls,
       PluginItem,
       PluginsPlaceholder
     },

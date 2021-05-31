@@ -13,7 +13,7 @@ export default defineConfig({
     }
   },
   resolve: {
-    extensions: ['.ts', '.js', '.scss', '.vue'],
+    extensions: ['.ts', '.js', '.scss', '..sass', '.vue'],
     alias: {
       '/@': path.resolve(__dirname, 'src')
     }
