@@ -6,7 +6,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "lint": "eslint --fix",
     "serve": "vite preview",
-    "generate-src": "node src/scripts/generatePluginsList.js"
+    "generate-src": "node src/scripts/generatePluginsList.js && prettier --write src/shared/data/plugins.ts"
   },
   "dependencies": {
     "vue": "^3.0.5",

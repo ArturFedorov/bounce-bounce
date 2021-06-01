@@ -1,14 +1,16 @@
 <template>
-  <div class="plugin">
-    <div class="plugin-content"><slot /></div>
+  <router-link to="/" class="plugin">
+    <div class="plugin-content"><slot name="content" /></div>
     <div class="plugin-submenu">
-      <p class="plugin-label">Component name</p>
+      <p class="plugin-label">
+        <slot name="name" />
+      </p>
       <div class="plugin-likes">
         <IconButton color="crimson" icon="heart" />
         <span>432</span>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script lang="ts">
@@ -18,6 +20,8 @@
 
 <style scoped lang="scss">
   .plugin {
+    position: relative;
+
     &-content {
       display: flex;
       align-items: center;

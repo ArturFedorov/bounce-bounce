@@ -1,5 +1,5 @@
 import { Plugin } from '/@/shared/types/models/Plugin'
-import pluginsList from '/@/store/features/plugins/plugins'
+import pluginsList from '/@/shared/data/plugins'
 
 export interface PluginModule {
   plugins: Plugin[]

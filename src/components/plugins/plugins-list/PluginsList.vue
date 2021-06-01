@@ -1,13 +1,17 @@
 <template>
   <div class="plugin-list">
-    <PluginItem :key="item" v-for="item in [1, 2, 3, 4, 5, 6, 7, 8, 9]">
-      <component :is="item === 1 ? `BouncingBalls` : 'PluginsPlaceholder'" />
+    <PluginItem :key="plugin.name" v-for="plugin in plugins">
+      <template #name>{{ breakWord(plugin.name) }}</template>
+      <template #content>
+        <component :is="plugin.name" />
+      </template>
     </PluginItem>
   </div>
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue'
+  import { breakWord } from '/@/shared/utils/typography.util'
   import PluginItem from '/@/components/plugins/plugins-list/plugin-item/PluginItem.vue'
 
   export default defineComponent({
@@ -24,9 +28,10 @@
         required: true
       }
     },
-    setup(props, context) {
-      // const
-      console.log(context)
+    setup() {
+      return {
+        breakWord: breakWord
+      }
     }
   })
 </script>
