@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { computed, defineComponent } from 'vue'
   import { breakWord } from '/@/shared/utils/typography.util'
   import PluginItem from '/@/components/plugins/plugins-list/plugin-item/PluginItem.vue'
 
