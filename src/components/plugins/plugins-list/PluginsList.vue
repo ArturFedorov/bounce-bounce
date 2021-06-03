@@ -1,16 +1,21 @@
 <template>
   <div class="plugin-list">
-    <PluginItem :key="plugin.name" v-for="plugin in plugins">
-      <template #name>{{ breakWord(plugin.name) }}</template>
-      <template #content>
-        <component :is="plugin.name" />
-      </template>
-    </PluginItem>
+    <template v-if="plugins.length">
+      <PluginItem v-for="plugin in plugins" :key="plugin.name">
+        <template #name>{{ breakWord(plugin.name) }}</template>
+        <template #content>
+          <component :is="plugin.name" />
+        </template>
+      </PluginItem>
+    </template>
+    <template v-else>
+      <PluginsEmpty class="plugin-list-empty" />
+    </template>
   </div>
 </template>
 
 <script lang="ts">
-  import { computed, defineComponent } from 'vue'
+  import { defineComponent } from 'vue'
   import { breakWord } from '/@/shared/utils/typography.util'
   import PluginItem from '/@/components/plugins/plugins-list/plugin-item/PluginItem.vue'
 
@@ -24,7 +29,7 @@
         required: true
       },
       plugins: {
-        type: Array,
+        type: Array as () => Plugin[],
         required: true
       }
     },
@@ -41,5 +46,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(75px, calc(33.3% - 1.5em)));
     grid-gap: 1.5em;
+
+    &-empty {
+      grid-column: span 4;
+    }
   }
 </style>

@@ -29,6 +29,7 @@
       background-color: $purple-light;
       border-radius: $building-unit-x4;
       height: 280px;
+      overflow: hidden;
     }
 
     &-label {
