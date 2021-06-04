@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div :style="{ width, height }" class="card">
     <div class="moon">
       <div v-for="item of craters" :key="item" :class="`moon-crater-${item}`" />
     </div>
@@ -13,6 +13,14 @@
 <script lang="ts">
   import { defineComponent } from 'vue'
   export default defineComponent({
+    props: {
+      width: {
+        type: String
+      },
+      height: {
+        type: String
+      }
+    },
     setup() {
       const drops = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
       return {

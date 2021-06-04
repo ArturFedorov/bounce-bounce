@@ -1,5 +1,6 @@
 // components
 import WeatherRainCard from '/@/components/plugins/plugins-src/components/WeatherRainCard.vue'
+import WeatherSunCard from '/@/components/plugins/plugins-src/components/WeatherSunCard.vue'
 
 // loaders
 import BouncingBalls from '/@/components/plugins/plugins-src/loaders/BouncingBalls.vue'
@@ -14,6 +15,7 @@ import { App } from 'vue'
 const components: { [key: string]: Record<string, unknown> } = {
   // components
   WeatherRainCard,
+  WeatherSunCard,
 
   // loaders
   BouncingBalls,
