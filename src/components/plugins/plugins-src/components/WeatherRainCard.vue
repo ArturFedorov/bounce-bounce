@@ -4,9 +4,9 @@
       <div v-for="item of craters" :key="item" :class="`moon-crater-${item}`" />
     </div>
     <div :class="`hill-${item > 2 ? 'fg' : 'bg'}-${item}`" :key="item" v-for="item of hills" />
-    <div v-for="item of drops" :key="item" :class="`drop-big-${item}`" />
-    <div v-for="item of drops" :key="item" :class="`drop-medium-${item}`" />
-    <div v-for="item of drops" :key="item" :class="`drop-small-${item}`" />
+    <div v-for="item of drops" :key="item" :class="`drop drop-big-${item}`" />
+    <div v-for="item of drops" :key="item" :class="`drop drop-medium-${item}`" />
+    <div v-for="item of drops" :key="item" :class="`drop drop-small-${item}`" />
   </div>
 </template>
 
@@ -49,6 +49,13 @@
     width: 100%;
     height: 100%;
     position: relative;
+
+    &:hover {
+      .drop {
+        visibility: visible;
+        animation-name: drop;
+      }
+    }
   }
 
   .moon {
@@ -175,6 +182,11 @@
     }
   }
 
+  .drop {
+    visibility: hidden;
+    animation-name: none;
+  }
+
   @for $i from 1 through 10 {
     .drop-big-#{$i} {
       position: absolute;
@@ -185,7 +197,10 @@
       height: 8px;
       border-radius: 50%;
       background: $drop-color;
-      animation: drop (0.7 + random(2) / 10) + s linear (random(50) / 25) + s infinite;
+      animation-duration: (0.7 + random(2) / 10) + s;
+      animation-timing-function: linear;
+      animation-delay: (random(50) / 25) + s;
+      animation-iteration-count: infinite;
       animation-fill-mode: both;
       transform-origin: 50% 100%;
 
@@ -220,7 +235,10 @@
       opacity: 0.6;
       width: 6px;
       height: 6px;
-      animation: drop (1.3 + random(2) / 10) + s linear (random(50) / 25) + s infinite;
+      animation-duration: (1.3 + random(2) / 10) + s;
+      animation-timing-function: linear;
+      animation-delay: (random(50) / 25) + s;
+      animation-iteration-count: infinite;
       animation-fill-mode: both;
 
       &:before {
@@ -244,7 +262,10 @@
       opacity: 0.3;
       width: 4px;
       height: 4px;
-      animation: drop (1.9 + random(2) / 10) + s linear (random(50) / 25) + s infinite;
+      animation-duration: (1.9 + random(2) / 10) + s;
+      animation-timing-function: linear;
+      animation-delay: (random(50) / 25) + s;
+      animation-iteration-count: infinite;
       animation-fill-mode: both;
 
       &:before {

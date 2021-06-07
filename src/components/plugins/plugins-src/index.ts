@@ -5,6 +5,7 @@ import WeatherSunCard from '/@/components/plugins/plugins-src/components/Weather
 // loaders
 import BouncingBalls from '/@/components/plugins/plugins-src/loaders/BouncingBalls.vue'
 import DancingSquares from '/@/components/plugins/plugins-src/loaders/DancingSquares.vue'
+import HorizontalBalls from '/@/components/plugins/plugins-src/loaders/HorizontalBalls.vue'
 import HorizontalLine from '/@/components/plugins/plugins-src/loaders/HorizontalLine.vue'
 
 // placeholder
@@ -20,6 +21,7 @@ const components: { [key: string]: Record<string, unknown> } = {
   // loaders
   BouncingBalls,
   DancingSquares,
+  HorizontalBalls,
   HorizontalLine,
 
   // placeholder
