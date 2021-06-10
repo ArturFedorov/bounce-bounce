@@ -59,7 +59,7 @@
 
   .tab-navigation {
     padding: 0 1rem;
-    transition: max-height 0.4s ease-in-out;
+    transition: max-height 0.4s ease-in-out, opacity 0.2s ease-in-out;
     max-height: $filters-navigation-height;
     width: 100%;
 

@@ -1,32 +1,23 @@
 <template>
   <div class="tab-bar">
-    <TabNavigation />
+    <TabNavigation class="tab-bar-navigation" :class="{ 'is-closed': activeKey.index !== 1 }" />
     <div class="tab-bar-container">
       <div class="tab-bar-wrapper">
         <ul class="tab-bar-tabs">
-          <li>
-            <button class="tab-bar-button">
-              <SvgIcon name="image" />
-            </button>
-          </li>
-          <li>
-            <button class="tab-bar-button">
-              <SvgIcon name="plus_circled" />
-            </button>
-          </li>
-          <li>
-            <button class="tab-bar-button">
-              <SvgIcon name="bell" />
-            </button>
-          </li>
-          <li>
-            <button class="tab-bar-button">
-              <SvgIcon name="cart" />
+          <li v-for="(button, index) of buttons" :key="button">
+            <button class="tab-bar-button" @click.prevent="setActiveKey(button, index)">
+              <SvgIcon :name="button" />
             </button>
           </li>
         </ul>
-        <div class="tab-bar-slider" aria-hidden="true">
-          <div class="tab-bar-slider-circle">&nbsp;</div>
+        <div
+          class="tab-bar-slider"
+          aria-hidden="true"
+          :style="{ transform: `translateX(${activeKey.index * 100}%)` }"
+        >
+          <div :class="{ 'animate-jello': hasJelloClass }" class="tab-bar-slider-circle">
+            &nbsp;
+          </div>
         </div>
       </div>
     </div>
@@ -35,13 +26,39 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  export default defineComponent({})
+  export default defineComponent({
+    props: {
+      buttons: {
+        type: Array,
+        default: () => ['image', 'plus_circled', 'bell', 'cart']
+      }
+    },
+    data() {
+      return {
+        activeKey: { button: 'image', index: 0 },
+        hasJelloClass: false
+      }
+    },
+    methods: {
+      setActiveKey(button: string, index: number) {
+        this.activeKey = { button, index }
+        this.toggleJello()
+      },
+      toggleJello() {
+        this.hasJelloClass = false
+        setTimeout(() => {
+          this.hasJelloClass = true
+        }, 100)
+      }
+    }
+  })
 </script>
 
 <style scoped lang="scss">
   $grey-900: #212121;
   $green-100: #c8e6c9;
   $green-A700: #00c853;
+  $purple: #f3e5f5;
 
   $button-height: 3.5rem;
 
@@ -49,7 +66,6 @@
     background-color: $white;
     border-radius: 1.8rem;
     user-select: none;
-    padding-top: 1rem;
     width: 100%;
     margin: 0 1rem;
 
@@ -99,22 +115,36 @@
       }
     }
 
+    &-navigation {
+      margin-top: 1rem;
+      transition: opacity 0.5s ease-in-out;
+
+      &.is-closed {
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+      }
+    }
+
     &-slider {
       pointer-events: none;
       position: absolute;
       top: 0;
       left: 0;
-      padding: 1rem 1.9rem;
+      padding: 1rem 0;
       z-index: 0;
       transition: transform 0.4s ease-in-out;
       transform: translateX(0);
+      width: 25%;
+      display: flex;
+      justify-content: center;
 
       &-circle {
         height: $button-height;
         width: $button-height;
         border-radius: 50%;
         transition: background-color 0.4s ease-in-out;
-        background-color: $green-100;
+        background-color: $purple;
       }
     }
 
