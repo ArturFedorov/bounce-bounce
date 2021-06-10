@@ -21,6 +21,13 @@
       <SvgIcon color="#220C22" name="loaders" />
       <span class="is-white-text">Controls</span>
     </router-link>
+    <router-link
+      :to="{ name: routes.PLUGINS, params: { type: pluginType.ILLUSTRATION } }"
+      class="plugins-navigation-link"
+    >
+      <SvgIcon color="#ffffff" name="image" />
+      <span class="is-white-text">Illustration</span>
+    </router-link>
     <p class="plugins-navigation-label is-white-text">1 234 plugins</p>
   </div>
 </template>

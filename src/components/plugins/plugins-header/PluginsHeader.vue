@@ -30,7 +30,7 @@
   .plugins-header {
     background-color: $black;
     display: flex;
-    height: $height;
+    min-height: $height;
     width: 100%;
     position: relative;
     overflow: hidden;

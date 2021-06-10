@@ -1,8 +1,6 @@
 // components
 import TabBar from '/@/components/plugins/plugins-src/components/TabBar.vue'
-import TabNavigation from '/@/components/plugins/plugins-src/components/TabNavigation.vue';
-import WeatherRainCard from '/@/components/plugins/plugins-src/components/WeatherRainCard.vue'
-import WeatherSunCard from '/@/components/plugins/plugins-src/components/WeatherSunCard.vue'
+import TabNavigation from '/@/components/plugins/plugins-src/components/TabNavigation.vue'
 
 // loaders
 import BouncingBalls from '/@/components/plugins/plugins-src/loaders/BouncingBalls.vue'
@@ -14,6 +12,10 @@ import HorizontalLine from '/@/components/plugins/plugins-src/loaders/Horizontal
 import PluginsEmpty from '/@/components/plugins/plugins-src/plugins-placeholder/PluginsEmpty.vue'
 import PluginsPlaceholder from '/@/components/plugins/plugins-src/plugins-placeholder/PluginsPlaceholder.vue'
 import { App } from 'vue'
+
+// illustration
+import WeatherRainCard from '/@/components/plugins/plugins-src/illustration/WeatherRainCard.vue'
+import WeatherSunCard from '/@/components/plugins/plugins-src/illustration/WeatherSunCard.vue'
 
 const components: { [key: string]: Record<string, unknown> } = {
   // components

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <PluginsHeader />
     <main>
       <div class="container">
         <PluginsNavigation class="plugins-section" />

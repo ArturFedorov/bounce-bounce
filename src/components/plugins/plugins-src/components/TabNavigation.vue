@@ -16,9 +16,7 @@
         <div
           :style="{ transform: `translateX(${activeKey.index * 100}%)` }"
           class="tab-navigation-slider-rect"
-        >
-          &nbsp;
-        </div>
+        ></div>
       </div>
     </div>
   </div>

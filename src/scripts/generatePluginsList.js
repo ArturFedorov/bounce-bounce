@@ -8,7 +8,7 @@ const pluginsList: Plugin[] = $PLUGINS
 
 export default pluginsList`
 
-const requiredFolders = ['components', 'loaders', 'controls']
+const requiredFolders = ['components', 'loaders', 'controls', 'illustration']
 const srcPath = '../components/plugins/plugins-src'
 const fullSrcPath = path.join(__dirname, srcPath)
 
