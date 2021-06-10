@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/" class="plugin">
+  <div class="plugin">
     <div class="plugin-content"><slot name="content" /></div>
     <div class="plugin-submenu">
       <p class="plugin-label">
@@ -10,7 +10,7 @@
         <span>432</span>
       </div>
     </div>
-  </router-link>
+  </div>
 </template>
 
 <script lang="ts">

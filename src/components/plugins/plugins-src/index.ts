@@ -1,4 +1,6 @@
 // components
+import TabBar from '/@/components/plugins/plugins-src/components/TabBar.vue'
+import TabNavigation from '/@/components/plugins/plugins-src/components/TabNavigation.vue';
 import WeatherRainCard from '/@/components/plugins/plugins-src/components/WeatherRainCard.vue'
 import WeatherSunCard from '/@/components/plugins/plugins-src/components/WeatherSunCard.vue'
 
@@ -15,6 +17,8 @@ import { App } from 'vue'
 
 const components: { [key: string]: Record<string, unknown> } = {
   // components
+  TabBar,
+  TabNavigation,
   WeatherRainCard,
   WeatherSunCard,
 
