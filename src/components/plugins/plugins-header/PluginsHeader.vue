@@ -12,9 +12,11 @@
           </p>
           <p class="plugins-header-text is-white-text">This is a place for experiments.</p>
         </div>
+        <router-link to="/components" class="plugins-header-link">
+          <Button>Get Started</Button>
+        </router-link>
       </div>
     </div>
-    <img class="plugins-header-bg" src="../../../assets/images/bg.svg" alt="bg" />
   </div>
 </template>
 
@@ -34,15 +36,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-
-    &-bg {
-      top: 0;
-      position: absolute;
-      right: 0;
-      z-index: 0;
-      left: 0;
-      width: 100%;
-    }
+    background-image: url('/@/assets/images/bg.svg');
 
     &-container {
       display: flex;
@@ -56,6 +50,11 @@
 
     &-heading {
       margin: 0;
+    }
+
+    &-link {
+      display: block;
+      margin-top: $building-unit-x3;
     }
 
     &-section {

@@ -5,7 +5,7 @@
       <p class="plugin-label">
         <slot name="name" />
       </p>
-      <div class="plugin-likes">
+      <div v-if="false" class="plugin-likes">
         <IconButton color="crimson" icon="heart" />
         <span>432</span>
       </div>
