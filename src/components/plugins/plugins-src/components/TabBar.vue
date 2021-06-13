@@ -29,7 +29,7 @@
   export default defineComponent({
     props: {
       buttons: {
-        type: Array,
+        type: Array as () => Array<string>,
         default: () => ['image', 'plus_circled', 'bell', 'cart']
       }
     },

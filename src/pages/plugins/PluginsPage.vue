@@ -12,7 +12,6 @@
 <script lang="ts">
   import { computed, defineComponent } from 'vue'
   import { useStore } from 'vuex'
-  import PluginsHeader from '/@/components/plugins/plugins-header/PluginsHeader.vue'
   import PluginsNavigation from '/@/components/plugins/plugins-navigation/PluginsNavigation.vue'
   import PluginsList from '/@/components/plugins/plugins-list/PluginsList.vue'
   import { Plugin } from '/@/shared/types/models/Plugin'
@@ -23,7 +22,6 @@
   export default defineComponent({
     components: {
       PluginsList,
-      PluginsHeader,
       PluginsNavigation
     },
     setup() {

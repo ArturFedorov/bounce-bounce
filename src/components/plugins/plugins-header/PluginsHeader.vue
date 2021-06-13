@@ -2,6 +2,7 @@
   <div class="plugins-header">
     <div class="container plugins-header-container">
       <div class="plugins-header-section">
+        <div class="plugins-header-cover" />
         <h1 class="plugins-header-heading is-green-text">
           UI Components <br />
           that are not for everybody.
@@ -44,12 +45,25 @@
       position: relative;
     }
 
+    &-cover {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $black;
+      position: absolute;
+      z-index: 2;
+      animation: scroll-down 1s cubic-bezier(0.7, 0, 0.83, 0.4) forwards;
+    }
+
     &-description {
       margin-top: $building-unit-x2;
+      animation: move-up 1.4s ease-in-out;
     }
 
     &-heading {
       margin: 0;
+      animation: move-up 1.4s ease-in-out;
     }
 
     &-link {
@@ -60,10 +74,31 @@
     &-section {
       position: relative;
       z-index: 1;
+      overflow: hidden;
     }
 
     &-text {
       margin: 0;
+    }
+  }
+
+  @keyframes move-up {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(100%);
     }
   }
 </style>

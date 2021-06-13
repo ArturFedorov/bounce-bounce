@@ -41,6 +41,7 @@
       margin-top: $building-unit-x2;
       width: $building-unit-x9;
       height: $building-unit-x3;
+      animation: grow-from-bottom 0.4s ease-in-out 1.5s both;
     }
 
     &-circle {
@@ -49,7 +50,7 @@
       height: $building-unit-x6;
       width: $building-unit-x6;
       transform-origin: center center;
-      animation: center-scale 1s ease-in-out 2s;
+      animation: center-scale 0.8s cubic-bezier(0, 0, 0.03, 0.9) 0.6s both;
     }
 
     &-line {
@@ -58,6 +59,8 @@
       width: 90%;
       height: $building-unit;
       margin-bottom: $building-unit;
+      transform-origin: left center;
+      animation: left-right-scale 0.8s cubic-bezier(0, 0, 0.09, 0.9) 1.2s backwards;
 
       &.is-thick {
         border-radius: 4px;
@@ -77,14 +80,17 @@
 
   @keyframes grow-from-bottom {
     0% {
+      opacity: 0;
       transform: scaleY(0);
     }
 
     10% {
+      opacity: 0.3;
       transform: scaleY(0.3);
     }
 
     100% {
+      opacity: 1;
       transform: scaleY(1);
     }
   }
@@ -98,6 +104,18 @@
     100% {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+
+  @keyframes left-right-scale {
+    0% {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scaleX(1);
     }
   }
 </style>

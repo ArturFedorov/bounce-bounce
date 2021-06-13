@@ -27,7 +27,7 @@
   export default defineComponent({
     props: {
       buttons: {
-        type: Array,
+        type: Array as () => Array<string>,
         default: () => ['New', 'Popular', 'Following']
       }
     },
