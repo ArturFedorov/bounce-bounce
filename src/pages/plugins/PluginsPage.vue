@@ -27,7 +27,6 @@
     setup() {
       const route = useRoute()
       const params = computed(() => route.params)
-      console.log(params.value)
       const store = useStore<PluginModule>()
 
       return {

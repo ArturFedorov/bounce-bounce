@@ -17,6 +17,10 @@
 
 <style scoped lang="scss">
   $loader-height: $building_unit * 50;
+  $animation-delay: 0;
+  $animation-delay-second: $animation-delay + 0.6;
+  $animation-delay-third: $animation-delay + 1.2;
+  $animation-delay-fourth: $animation-delay + 1.5;
 
   .animated-skeleton {
     border-radius: $border-radius;
@@ -30,7 +34,7 @@
     position: absolute;
     padding: $building-unit-x4;
     top: 20%;
-    animation: grow-from-bottom 1s ease-out;
+    animation: grow-from-bottom 1s ease-out #{$animation-delay} + s;
     transform-origin: bottom;
   }
 
@@ -41,7 +45,7 @@
       margin-top: $building-unit-x2;
       width: $building-unit-x9;
       height: $building-unit-x3;
-      animation: grow-from-bottom 0.4s ease-in-out 1.5s both;
+      animation: grow-from-bottom 0.4s ease-in-out #{$animation-delay-fourth}+ s both;
     }
 
     &-circle {
@@ -50,7 +54,7 @@
       height: $building-unit-x6;
       width: $building-unit-x6;
       transform-origin: center center;
-      animation: center-scale 0.8s cubic-bezier(0, 0, 0.03, 0.9) 0.6s both;
+      animation: center-scale 0.8s cubic-bezier(0, 0, 0.03, 0.9) #{$animation-delay-second}+ s both;
     }
 
     &-line {
@@ -60,7 +64,8 @@
       height: $building-unit;
       margin-bottom: $building-unit;
       transform-origin: left center;
-      animation: left-right-scale 0.8s cubic-bezier(0, 0, 0.09, 0.9) 1.2s backwards;
+      animation: left-right-scale 0.8s cubic-bezier(0, 0, 0.09, 0.9) #{$animation-delay-third}+ s
+        backwards;
 
       &.is-thick {
         border-radius: 4px;

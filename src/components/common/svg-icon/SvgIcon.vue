@@ -17,6 +17,10 @@
         type: String,
         required: true
       },
+      className: {
+        type: String,
+        required: false
+      },
       color: {
         type: String,
         default: '#333'

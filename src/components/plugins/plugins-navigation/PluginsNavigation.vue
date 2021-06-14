@@ -4,44 +4,50 @@
       :to="{ name: routes.PLUGINS, params: { type: pluginType.COMPONENTS } }"
       class="plugins-navigation-link"
     >
-      <SvgIcon color="#220C22" name="list" />
-      <span class="is-white-text">Components</span>
+      <span>Components</span>
     </router-link>
     <router-link
       :to="{ name: routes.PLUGINS, params: { type: pluginType.LOADERS } }"
       class="plugins-navigation-link"
     >
-      <SvgIcon color="#220C22" name="loader" />
-      <span class="is-white-text">Loaders</span>
+      <span>Loaders</span>
     </router-link>
     <router-link
       :to="{ name: routes.PLUGINS, params: { type: pluginType.CONTROLS } }"
       class="plugins-navigation-link"
     >
-      <SvgIcon color="#220C22" name="loaders" />
-      <span class="is-white-text">Controls</span>
+      <span>Controls</span>
     </router-link>
     <router-link
       :to="{ name: routes.PLUGINS, params: { type: pluginType.ILLUSTRATION } }"
       class="plugins-navigation-link"
     >
-      <SvgIcon color="#ffffff" name="image" />
-      <span class="is-white-text">Illustration</span>
+      <span>Illustration</span>
     </router-link>
-    <p class="plugins-navigation-label is-white-text">1 234 plugins</p>
+    <p v-if="pluginsCount > 0" class="plugins-navigation-label">
+      {{ pluginsCount }} {{ pluginsCount > 1 ? 'plugins' : 'plugin' }}
+    </p>
   </div>
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { computed, defineComponent } from 'vue'
   import { Routes } from '/@/router/router'
   import { PluginType } from '/@/shared/types/enums/PluginType'
+  import { useStore } from 'vuex'
+  import { GET_PLUGINS_BY_TYPE, PluginModule } from '/@/store/features/plugins'
+  import { useRoute } from 'vue-router'
 
   export default defineComponent({
     setup() {
+      const store = useStore<PluginModule>()
+      const route = useRoute()
+      const params = computed(() => route.params)
+
       return {
         routes: Routes,
-        pluginType: PluginType
+        pluginType: PluginType,
+        pluginsCount: computed(() => store.getters[GET_PLUGINS_BY_TYPE](params.value.type).length)
       }
     }
   })
@@ -49,10 +55,8 @@
 
 <style scoped lang="scss">
   .plugins-navigation {
-    border-radius: $building-unit-x2;
     display: flex;
     align-items: center;
-    background-color: $black;
 
     &-label {
       margin-left: auto;
@@ -60,21 +64,28 @@
     }
 
     &-link {
+      background-color: $purple-light;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-right: 1px dashed $gray-dark;
-      min-width: $building-unit-x17;
-      padding: $building-unit-x1_5 $building-unit-x2_5;
+      border-radius: $building-unit-x1_5;
+      padding: $building-unit-x1_5 $building-unit-x3;
       transition: $default-transition;
+      color: $black;
+      margin-right: 1rem;
 
-      .is-white-text {
-        margin-left: $building-unit;
+      &:last-child {
+        margin-right: 0;
       }
     }
   }
 
   .router-link-exact-active {
+    background-color: $black;
     font-weight: $font-bold;
+
+    span {
+      color: $white;
+    }
   }
 </style>

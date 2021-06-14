@@ -2,7 +2,8 @@
   <div class="home">
     <PluginsHeader />
     <div class="container home-info">
-      <AnimatedSkeleton />
+      <AnimatedSkeleton class="home-animation" />
+      <AnimatedSkeleton class="home-animation is-second" />
     </div>
   </div>
 </template>
@@ -28,10 +29,30 @@
     display: flex;
     flex-direction: column;
 
+    &-animation {
+      left: 0;
+      z-index: 2;
+
+      &.is-second {
+        top: 20%;
+        animation: slide-right 1s ease-in-out both 0.1s;
+        z-index: 1;
+      }
+    }
+
     &-info {
       position: relative;
       overflow: hidden;
       flex: 1;
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      transform: translateX(100%) scale(0.6) scaleY(0);
+    }
+    100% {
+      transform: translateX(100%) scale(0.8) scaleY(1);
     }
   }
 </style>
