@@ -35,8 +35,4 @@ const components: { [key: string]: Record<string, unknown> } = {
   PluginsPlaceholder
 }
 
-function registerSrcComponents(app: App) {
-  Object.keys(components).forEach((key) => app.component(key, components[key]))
-}
-
-export default registerSrcComponents
+export default components

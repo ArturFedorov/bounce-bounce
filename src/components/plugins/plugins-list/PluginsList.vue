@@ -18,10 +18,12 @@
   import { defineComponent } from 'vue'
   import { breakWord } from '/@/shared/utils/typography.util'
   import PluginItem from '/@/components/plugins/plugins-list/plugin-item/PluginItem.vue'
+  import components from '/@/components/plugins/plugins-src'
 
   export default defineComponent({
     components: {
-      PluginItem
+      PluginItem,
+      ...components
     },
     props: {
       pluginType: {
