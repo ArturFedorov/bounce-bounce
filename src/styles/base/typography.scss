@@ -1,0 +1,30 @@
+* {
+  color: $black;
+  font-family: $font-family;
+}
+
+html {
+  font-size: $font-size-body;
+}
+
+h1 {
+  font-weight: $font-extra-bold;
+  font-size: 3.5em;
+  line-height: 100%;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.is-white-text {
+  color: $white;
+}
+
+.is-green-text {
+  color: $chemical;
+}

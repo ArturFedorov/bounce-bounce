@@ -1,0 +1,31 @@
+@font-face {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-regular;
+  src: url('/@/styles/fonts/TTNorms-Regular.ttf') format('truetype'),
+       url('/@/styles/fonts/TTNorms-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-medium;
+  src: url('/@/styles/fonts/TTNorms-Medium.ttf') format('truetype'),
+       url('/@/styles/fonts/TTNorms-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-bold;
+  src: url('/@/styles/fonts/TTNorms-Bold.ttf') format('truetype'),
+       url('/@/styles/fonts/TTNorms-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-extra-bold;
+  src: url('/@/styles/fonts/TTNorms-ExtraBold.ttf') format('truetype'),
+       url('/@/styles/fonts/TTNorms-ExtraBold.woff') format('woff');
+}
