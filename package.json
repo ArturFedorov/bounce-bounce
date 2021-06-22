@@ -2,7 +2,7 @@
   "name": "bounce-bounce",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "TARGET_FRAMEWORK=react vite",
     "build": "vue-tsc --noEmit && vite build",
     "lint": "eslint --fix",
     "serve": "vite preview",

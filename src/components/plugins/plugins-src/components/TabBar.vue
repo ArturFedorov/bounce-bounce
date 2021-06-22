@@ -26,7 +26,12 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
+  import TabNavigation from '/@/components/plugins/plugins-src/components/TabNavigation.vue'
+
   export default defineComponent({
+    components: {
+      TabNavigation
+    },
     props: {
       buttons: {
         type: Array as () => Array<string>,
@@ -68,6 +73,7 @@
     user-select: none;
     width: 100%;
     margin: 0 1rem;
+    height: auto;
 
     &-button {
       border: none;
@@ -117,7 +123,6 @@
 
     &-navigation {
       margin-top: 1rem;
-      transition: opacity 0.5s ease-in-out;
 
       &.is-closed {
         margin-top: 0;
