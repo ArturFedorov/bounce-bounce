@@ -10,8 +10,8 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import PluginsHeader from '/@/components/plugins/plugins-header/PluginsHeader.vue'
-  import AnimatedSkeleton from '/@/components/home/animated-skeleton/AnimatedSkeleton.vue'
+  import PluginsHeader from '/@/app-vue/components/plugins/plugins-header/PluginsHeader.vue'
+  import AnimatedSkeleton from '/@/app-vue/components/home/animated-skeleton/AnimatedSkeleton.vue'
 
   export default defineComponent({
     components: {

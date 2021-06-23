@@ -5,9 +5,10 @@ import viteSvgIcons from 'vite-plugin-svg-icons'
 import { mergeConfigObjects } from './src/shared/utils/config.util'
 const getCommonConfig = () => import(`./config/vite.common.config`)
 const getVueConfig = () => import('./config/vite.vue.config')
+const getReactConfig = () => import('./config/vite.react.config')
 
 Promise.all([getCommonConfig(), getVueConfig()]).then((res) => {
-  const config = mergeConfigObjects(res[1].vueConfig, res[0].config);
+  const config = mergeConfigObjects(res[1].vueConfig, res[0].config)
   console.log(config)
 })
 

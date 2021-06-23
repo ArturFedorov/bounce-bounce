@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-const HomePage = () => import(/* webpackChunkName: "home page" */ '/@/pages/home/HomePage.vue')
+const HomePage = () =>
+  import(/* webpackChunkName: "home page" */ '/@/app-vue/pages/home/HomePage.vue')
 const LoadersPage = () =>
-  import(/* webpackChunkName: "plugins page" */ '/@/pages/plugins/PluginsPage.vue')
+  import(/* webpackChunkName: "plugins page" */ '/@/app-vue/pages/plugins/PluginsPage.vue')
 
 export enum Routes {
   HOME = 'home',

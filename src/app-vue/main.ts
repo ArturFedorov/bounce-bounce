@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './styles/styles.scss'
+import '/@/styles/styles.scss'
 import router from './router/router'
 import registerGlobalComponents from './components/common'
 import 'virtual:svg-icons-register'

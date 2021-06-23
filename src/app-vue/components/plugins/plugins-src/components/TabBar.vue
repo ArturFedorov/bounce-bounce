@@ -26,7 +26,7 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import TabNavigation from '/@/components/plugins/plugins-src/components/TabNavigation.vue'
+  import TabNavigation from '/@/app-vue/components/plugins/plugins-src/components/TabNavigation.vue'
 
   export default defineComponent({
     components: {

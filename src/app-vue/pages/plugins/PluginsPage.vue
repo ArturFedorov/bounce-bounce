@@ -12,11 +12,11 @@
 <script lang="ts">
   import { computed, defineComponent } from 'vue'
   import { useStore } from 'vuex'
-  import PluginsNavigation from '/@/components/plugins/plugins-navigation/PluginsNavigation.vue'
-  import PluginsList from '/@/components/plugins/plugins-list/PluginsList.vue'
-  import { Plugin } from '/@/shared/types/models/Plugin'
-  import { PluginModule } from '/@/store/features/plugins'
-  import { GET_PLUGINS } from '/@/store/features/plugins'
+  import PluginsNavigation from '/@/app-vue/components/plugins/plugins-navigation/PluginsNavigation.vue'
+  import PluginsList from '/@/app-vue/components/plugins/plugins-list/PluginsList.vue'
+  import { Plugin } from '/@/app-vue/shared/types/models/Plugin'
+  import { PluginModule } from '/@/app-vue/store/features/plugins'
+  import { GET_PLUGINS } from '/@/app-vue/store/features/plugins'
   import { useRoute } from 'vue-router'
 
   export default defineComponent({
