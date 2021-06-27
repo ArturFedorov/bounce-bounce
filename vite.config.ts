@@ -3,14 +3,17 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import viteSvgIcons from 'vite-plugin-svg-icons'
 import { mergeConfigObjects } from './src/shared/utils/config.util'
-const getCommonConfig = () => import(`./config/vite.common.config`)
-const getVueConfig = () => import('./config/vite.vue.config')
-const getReactConfig = () => import('./config/vite.react.config')
+import { commonConfig } from './config/vite.common.config'
+import { vueConfig } from './config/vite.vue.config'
+import { reactConfig } from './config/vite.react.config'
 
-Promise.all([getCommonConfig(), getVueConfig()]).then((res) => {
-  const config = mergeConfigObjects(res[1].vueConfig, res[0].config)
-  console.log(config)
-})
+const targetFramework = process.env.TARGET_FRAMEWORK || 'vue'
+const configs =
+  targetFramework === 'vue'
+    ? mergeConfigObjects(vueConfig, commonConfig)
+    : mergeConfigObjects(reactConfig, commonConfig)
+
+console.log(configs)
 
 export enum ViteCommands {
   BUILD = 'build',
@@ -45,8 +48,8 @@ const config = {
 
 export default ({ command, mode }: { command: string; mode?: string }) => {
   if (command === ViteCommands.SERVE) {
-    return defineConfig(config)
+    return defineConfig(configs)
   } else {
-    return defineConfig(config)
+    return defineConfig(configs)
   }
 }

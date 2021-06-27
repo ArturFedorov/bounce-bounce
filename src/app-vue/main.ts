@@ -9,4 +9,4 @@ import store from './store'
 const app = createApp(App)
 registerGlobalComponents(app)
 
-app.use(router).use(store).mount('#app')
+app.use(router).use(store).mount('#root')

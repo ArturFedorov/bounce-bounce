@@ -29,7 +29,7 @@ const components: { [key: string]: Record<string, unknown> } = {
   HorizontalBalls,
   HorizontalLine,
 
-  // placeholde r
+  // placeholder
   PluginsEmpty,
   PluginsPlaceholder
 }

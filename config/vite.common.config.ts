@@ -1,7 +1,8 @@
 import path from 'path'
+import { UserConfig } from 'vite'
 import viteSvgIcons from 'vite-plugin-svg-icons'
 
-export const config = {
+export const commonConfig: UserConfig = {
   css: {
     preprocessorOptions: {
       scss: {
@@ -10,9 +11,9 @@ export const config = {
     }
   },
   resolve: {
-    extensions: ['.ts', '.js', '.scss', '.sass', '.vue'],
+    extensions: ['.ts', '.js', '.tsx', '.jsx', '.scss', '.sass', '.vue'],
     alias: {
-      '/@': path.resolve(__dirname, 'src')
+      '/@': path.resolve(__dirname, '../src')
     }
   },
   assetsInclude: 'woff',
