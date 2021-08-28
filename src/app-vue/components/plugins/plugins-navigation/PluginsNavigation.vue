@@ -68,7 +68,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: $building-unit-x1_5;
+      border-radius: $building-unit;
       padding: $building-unit-x1_5 $building-unit-x3;
       transition: $default-transition;
       color: $black;

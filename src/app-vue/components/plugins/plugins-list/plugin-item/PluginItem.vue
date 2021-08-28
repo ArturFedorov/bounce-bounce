@@ -27,7 +27,7 @@
       align-items: center;
       justify-content: center;
       background-color: $purple-light;
-      border-radius: $building-unit-x4;
+      border-radius: $building-unit;
       height: 280px;
       overflow: hidden;
     }

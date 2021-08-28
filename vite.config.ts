@@ -1,19 +1,19 @@
+import fs from 'fs'
 import path from 'path'
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import viteSvgIcons from 'vite-plugin-svg-icons'
 import { mergeConfigObjects } from './src/shared/utils/config.util'
 import { commonConfig } from './config/vite.common.config'
-import { vueConfig } from './config/vite.vue.config'
-import { reactConfig } from './config/vite.react.config'
+import { pathToSrcVue, vueConfig } from './config/vite.vue.config'
+import { pathToSrcReact, reactConfig } from './config/vite.react.config'
+import { Frameworks } from './src/shared/enums/system/frameworks'
+import { parse } from 'node-html-parser';
 
-const targetFramework = process.env.TARGET_FRAMEWORK || 'vue'
+const targetFramework = process.env.TARGET_FRAMEWORK || Frameworks.VUE
+const srcAttribute = targetFramework === Frameworks.VUE ? pathToSrcVue : pathToSrcReact
 const configs =
-  targetFramework === 'vue'
+  targetFramework === Frameworks.VUE
     ? mergeConfigObjects(vueConfig, commonConfig)
     : mergeConfigObjects(reactConfig, commonConfig)
-
-console.log(configs)
 
 export enum ViteCommands {
   BUILD = 'build',
@@ -21,30 +21,15 @@ export enum ViteCommands {
   SERVE = 'serve'
 }
 
-// https://vitejs.dev/config/
-const config = {
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import '${path.resolve(__dirname, 'src/styles/base/variables.scss')}';`
-      }
-    }
-  },
-  resolve: {
-    extensions: ['.ts', '.js', '.scss', '.sass', '.vue'],
-    alias: {
-      '/@': path.resolve(__dirname, 'src')
-    }
-  },
-  assetsInclude: 'woff',
-  plugins: [
-    vue(),
-    viteSvgIcons({
-      iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
-      symbolId: 'icon-[dir]-[name]'
-    })
-  ]
-}
+const html = fs.readFileSync(path.resolve(__dirname, 'index.html'))
+
+const root = parse(html.toString())
+
+const script = root.querySelector('script')
+
+script.setAttribute('src', srcAttribute)
+
+fs.writeFileSync(path.resolve(__dirname, 'index.html'), root.toString())
 
 export default ({ command, mode }: { command: string; mode?: string }) => {
   if (command === ViteCommands.SERVE) {
